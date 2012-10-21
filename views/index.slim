@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
+    script(src='assets/main.js')
+    link rel="stylesheet" href="assets/main.css"
+    title 街合わせ
+
+  body
+    header
+      h1 街合わせ
+    section.main
+      form action="/" method="post" name="form1"
+        input#form1 type="text" name="text"
+        input#form2 type="text" name="text2"
+        input type="submit" value="送信"
+    footer
+      p by zakuni
