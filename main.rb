@@ -24,16 +24,4 @@ class App < Sinatra::Base
     @j = JSON.parser.new(m.middle_of(params[:text], params[:text2])).parse()
     slim :result
   end
-
-  put '/' do
-    '.. update something ..'
-  end
-
-  delete '/' do
-    '.. annihilate something ..'
-  end
-
-  options '/' do
-    '.. appease something ..'
-  end
 end
