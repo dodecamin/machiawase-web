@@ -1,0 +1,62 @@
+GIT
+  remote: https://github.com/nightsailer/padrino-sprockets.git
+  revision: c15b4a7877a412f8d4ffff6201b93b0227617b66
+  specs:
+    padrino-sprockets (0.0.1)
+      sprockets
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (2.6.4)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.3)
+    eventmachine (1.0.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    hike (1.2.1)
+    hpricot (0.8.6)
+    machiawase (0.1.0)
+      hpricot
+    multi_json (1.3.6)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    sass (3.2.1)
+    sinatra (1.3.3)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    sinatra-contrib (1.3.1)
+      backports (>= 2.0)
+      eventmachine
+      rack-protection
+      rack-test
+      sinatra (~> 1.3.0)
+      tilt (~> 1.3)
+    slim (1.3.3)
+      temple (~> 0.5.5)
+      tilt (~> 1.3.3)
+    sprockets (2.8.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    temple (0.5.5)
+    tilt (1.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  coffee-script
+  machiawase
+  padrino-sprockets!
+  sass
+  sinatra
+  sinatra-contrib
+  slim
