@@ -13,8 +13,8 @@ html
     section.main
       form action="/" method="post" name="form1"
         input#form1 type="text" name="text"
+        input type="submit" value="待ち合わせる"
         input#form2 type="text" name="text2"
-        input type="submit" value="送信"
       h2 #{@j['address']}
       h2 最寄り駅: #{@j['near_station']}
     footer
