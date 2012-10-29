@@ -15,6 +15,7 @@ html
         input#form1 type="text" name="text"
         input#form2 type="text" name="text2"
         input type="submit" value="送信"
-      h2 #{@j["result"]["address"]}
+      h2 #{@j['address']}
+      h2 最寄り駅: #{@j['near_station']}
     footer
       p by zakuni
