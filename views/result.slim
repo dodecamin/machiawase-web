@@ -11,11 +11,15 @@ html
     header
       h1 街合わせ
     section.main
+      h2 #{@j['address']}
+      h2 最寄り駅: #{@j['near_station']}
+      iframe width="300" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?q=#{@j['latitude']},#{@j['longtitude']}&amp;ie=UTF8&amp;t=m&amp;z=14&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@j['latitude']},#{@j['longtitude']}&amp;output=embed"
+      br
+      small
+        a href="https://maps.google.co.jp/maps?q=#{@j['latitude']},#{@j['longtitude']}&amp;ie=UTF8&amp;t=m&amp;z=10&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@j['latitude']},#{@j['longtitude']}&amp;source=embed" style="color:#0000FF;text-align:left" 大きな地図で見る
       form action="/" method="post" name="form1"
         input#form1 type="text" name="text"
         input type="submit" value="待ち合わせる"
         input#form2 type="text" name="text2"
-      h2 #{@j['address']}
-      h2 最寄り駅: #{@j['near_station']}
     footer
       p by zakuni
