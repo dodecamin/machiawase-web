@@ -24,8 +24,7 @@ class App < Sinatra::Base
     p1 = Machiawase::Place.new(g1["lat"], g1["lon"])
     g2 = Machiawase::Place.geocode(params[:text2])
     p2 = Machiawase::Place.new(g2["lat"], g2["lon"])
-    m = Machiawase.new(p1, p2)
-    @j = JSON.parse(m.to_json)
+    @m = Machiawase.new(p1, p2)
     slim :result
   end
 end
