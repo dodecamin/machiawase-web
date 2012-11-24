@@ -14,17 +14,13 @@ class App < Sinatra::Base
     slim :index
   end
 
-  get '/hello/:name' do
-    "Hello #{params[:name]}"
+  get '/*/*' do
+    Machiawase.where(*params[:splat]).to_json
   end
 
   post '/' do
     "#{params[:text]} #{params[:text2]}"
-    g1 = Machiawase::Place.geocode(params[:text])
-    p1 = Machiawase::Place.new(g1["lat"], g1["lon"])
-    g2 = Machiawase::Place.geocode(params[:text2])
-    p2 = Machiawase::Place.new(g2["lat"], g2["lon"])
-    @m = Machiawase.new(p1, p2)
+    @m = Machiawase.where(params[:text], params[:text2])
     slim :result
   end
 end
