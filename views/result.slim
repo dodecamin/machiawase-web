@@ -17,7 +17,7 @@ html
       br
       small
         a href="https://maps.google.co.jp/maps?q=#{@m.lat},#{@m.lon}&amp;ie=UTF8&amp;t=m&amp;z=10&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@m.lat},#{@m.lon}&amp;source=embed" style="color:#0000FF;text-align:left" 大きな地図で見る
-      form action="/" method="post" name="form1"
+      form action="/rendezvous" method="post" name="form1"
         input#form1 type="text" name="text"
         input type="submit" value="待ち合わせる"
         input#form2 type="text" name="text2"

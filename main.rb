@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+require 'kconv'
+
 Slim::Engine.set_default_options :pretty => true
 
 class App < Sinatra::Base
@@ -14,13 +16,19 @@ class App < Sinatra::Base
     slim :index
   end
 
-  get '/*/*' do
-    Machiawase.where(*params[:splat]).to_json
+  before '/rendezvous*' do
+    @m = Machiawase.where(*URI.decode(request.query_string).toutf8.split(','))
   end
 
-  post '/' do
-    "#{params[:text]} #{params[:text2]}"
-    @m = Machiawase.where(params[:text], params[:text2])
+  get '/rendezvous.json' do
+    @m.to_json
+  end
+
+  post '/rendezvous' do
+    redirect to(URI.encode("/rendezvous?#{params[:text]},#{params[:text2]}"))
+  end
+
+  get '/rendezvous' do
     slim :result
   end
 end
