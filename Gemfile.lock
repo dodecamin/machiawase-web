@@ -17,9 +17,9 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
-    machiawase (0.3.4)
+    machiawase (0.3.5)
       nokogiri
-    multi_json (1.3.7)
+    multi_json (1.4.0)
     nokogiri (1.5.5)
     rack (1.4.1)
     rack-protection (1.2.0)
