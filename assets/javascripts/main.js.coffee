@@ -8,4 +8,3 @@ $ ->
     else
       alert("form is empty")
       return false
-      
