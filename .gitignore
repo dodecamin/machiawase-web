@@ -1,4 +1,15 @@
+# for emacs
+*~
+
+# for vim
+*.swp
+
+# for sass
 .sass-cache*
+
+# for bundler
 .bundle
 vendor/bundle/
-*.swp
+
+# for rvm
+.rvmrc
