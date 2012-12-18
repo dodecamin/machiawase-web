@@ -1,20 +1,23 @@
 doctype html
 html
   head
-    meta(charset='UTF-8')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
-    script(src='assets/main.js')
-    link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css"
-    link rel="stylesheet" href="assets/main.css"
+    meta charset='UTF-8'
+    script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'
+    script src='assets/js/bootstrap.min.js'
+    script src='assets/js/main.js'
+    link rel="stylesheet" href="assets/css/bootstrap.min.css"
+    link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css"
+    link rel="stylesheet" href="assets/css/main.css"
     title 街合わせ
 
   body
-    header
-      h1 街合わせ
-    section.main
-      form.places action="/rendezvous" method="post" name="form1"
-        input#form1 type="text" name="text"
-        input type="submit" value="待ち合わせる"
-        input#form2 type="text" name="text2"
-    footer
-      p by zakuni
+    div.container
+      header
+        h1 街合わせ
+      section.main
+        form class=".places form-inline" action="/rendezvous" method="post" name="form1"
+          input#form1 type="text" name="text"
+          input#submit_button class="btn" type="submit" value="待ち合わせる"
+          input#form2 type="text" name="text2"
+      footer
+        p by zakuni
