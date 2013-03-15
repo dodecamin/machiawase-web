@@ -6,6 +6,7 @@ gem "slim"
 gem "sass"
 gem "coffee-script"
 gem 'machiawase'
+gem 'newrelic_rpm'
 
 group :development do
   gem "sinatra-contrib", :require => "sinatra/reloader"

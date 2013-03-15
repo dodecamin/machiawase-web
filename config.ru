@@ -1,5 +1,6 @@
 require 'bundler'
 require 'json'
+require 'newrelic_rpm'
 
 Bundler.require
 
