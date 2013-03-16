@@ -1,6 +1,9 @@
 require 'bundler'
 require 'json'
-require 'newrelic_rpm'
+
+configure :production do
+  require 'newrelic_rpm'
+end
 
 Bundler.require
 
