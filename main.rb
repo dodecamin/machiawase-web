@@ -12,6 +12,10 @@ class App < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  configure :production do
+    require 'newrelic_rpm'
+  end
+
   get '/' do
     slim :index
   end

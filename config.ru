@@ -1,10 +1,6 @@
 require 'bundler'
 require 'json'
 
-configure :production do
-  require 'newrelic_rpm'
-end
-
 Bundler.require
 
 map '/assets' do
