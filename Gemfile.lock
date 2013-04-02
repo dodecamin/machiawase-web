@@ -1,34 +1,36 @@
 GIT
   remote: https://github.com/nightsailer/padrino-sprockets.git
-  revision: c15b4a7877a412f8d4ffff6201b93b0227617b66
+  revision: b018cb08af9d5b2ab9ddbf9f23a118f1ec7703d1
   specs:
-    padrino-sprockets (0.0.1)
+    padrino-sprockets (0.0.2)
       sprockets
 
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.0.3)
+    backports (3.1.1)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.5.0)
-    eventmachine (1.0.1)
+    coffee-script-source (1.6.2)
+    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
-    machiawase (0.4.0)
+    machiawase (0.6.0)
+      msgpack
       nokogiri
-    multi_json (1.6.1)
-    newrelic_rpm (3.5.8.72)
-    nokogiri (1.5.6)
+    msgpack (0.5.4)
+    multi_json (1.7.2)
+    newrelic_rpm (3.6.0.78)
+    nokogiri (1.5.9)
     rack (1.5.2)
-    rack-protection (1.4.0)
+    rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    sass (3.2.6)
-    sinatra (1.3.5)
+    sass (3.2.7)
+    sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
@@ -48,7 +50,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     temple (0.5.5)
-    tilt (1.3.4)
+    tilt (1.3.6)
 
 PLATFORMS
   ruby
