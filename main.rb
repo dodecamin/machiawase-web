@@ -28,6 +28,10 @@ class App < Sinatra::Base
     @m.to_json
   end
 
+  get '/rendezvous.msgpack' do
+    @m.to_msgpack
+  end
+
   post '/rendezvous' do
     redirect to(URI.encode("/rendezvous?#{params[:text]},#{params[:text2]}"))
   end
