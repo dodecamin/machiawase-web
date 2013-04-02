@@ -8,10 +8,6 @@ gem "coffee-script"
 gem 'machiawase'
 gem 'newrelic_rpm'
 
-configure :production do
-  require 'newrelic_rpm'
-end
-
 group :development do
   gem "sinatra-contrib", :require => "sinatra/reloader"
 end
