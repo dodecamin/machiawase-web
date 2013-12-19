@@ -10,7 +10,7 @@ html
     title 街合わせ
 
   body
-    div.container
+    .container
       header
         h1 街合わせ
       section.main
@@ -21,8 +21,11 @@ html
         small
           a href="https://maps.google.co.jp/maps?q=#{@m.lat},#{@m.lon}&amp;ie=UTF8&amp;t=m&amp;z=10&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@m.lat},#{@m.lon}&amp;source=embed" style="color:#0000FF;text-align:left" 大きな地図で見る
         form.form-inline action="/rendezvous" method="post" name="form1"
-          input#form1 type="text" name="text"
-          input#submit_button class="btn" type="submit" value="待ち合わせる"
-          input#form2 type="text" name="text2"
+          .form-group
+            input#form1.form-control type="text" name="text"
+          .form-group
+            input#submit_button.btn.btn-info type="submit" value="待ち合わせる"
+          .form-group
+            input#form2.form-control type="text" name="text2"
       footer
         p by zakuni
