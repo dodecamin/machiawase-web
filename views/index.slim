@@ -10,17 +10,18 @@ head
 body
   a href="https://github.com/zakuni/machiawase"
     img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"
-  .container
-    header
-      h1 街合わせ
-    section.main
-      form.places.form-inline action="/rendezvous" method="post" name="form1"
-        .form-group
-          input#form1.form-control type="text" name="text"
-        .form-group
-          input#submit_button.btn.btn-info type="submit" value="待ち合わせる"
-        .form-group
-          input#form2.form-control type="text" name="text2"
+  .jumbotron
+    .container
+      header
+        h1 街合わせ
+      section.main
+        form.places.form-inline action="/rendezvous" method="post" name="form1"
+          .form-group
+            input#form1.form-control type="text" name="text"
+          .form-group
+            input#submit_button.btn.btn-info type="submit" value="待ち合わせる"
+          .form-group
+            input#form2.form-control type="text" name="text2"
     footer
       div class="ninja_onebutton"
         javascript:
