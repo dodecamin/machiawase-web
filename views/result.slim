@@ -1,29 +1,33 @@
-doctype html
-html
-  head
-    meta charset='UTF-8'
-    script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'
-    script src='assets/js/bootstrap.min.js'
-    script src='assets/js/main.js'
-    link rel="stylesheet" href="assets/css/bootstrap.min.css"
-    link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css"
-    link rel="stylesheet" href="assets/css/main.css"
-    title 街合わせ
-
-  body
-    div.container
-      header
-        h1 街合わせ
-      section.main
-        h2 #{@m.address}
+body
+  .container
+    header
+      h1 街合わせ
+    section.main
+      h2 #{@m.address}
+      - unless @m.near_station.empty?
         h2 最寄り駅: #{@m.near_station}
-        iframe width="300" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?q=#{@m.lat},#{@m.lon}&amp;ie=UTF8&amp;t=m&amp;z=14&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@m.lat},#{@m.lon}&amp;output=embed"
-        br
-        small
-          a href="https://maps.google.co.jp/maps?q=#{@m.lat},#{@m.lon}&amp;ie=UTF8&amp;t=m&amp;z=10&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@m.lat},#{@m.lon}&amp;source=embed" style="color:#0000FF;text-align:left" 大きな地図で見る
-        form.form-inline action="/rendezvous" method="post" name="form1"
-          input#form1 type="text" name="text"
-          input#submit_button class="btn" type="submit" value="待ち合わせる"
-          input#form2 type="text" name="text2"
-      footer
-        p by zakuni
+      #map_canvas style="width:100%; height:300px"        
+      javascript:
+        var latlng = new google.maps.LatLng("#{@m.lat}", "#{@m.lon}");      
+        var mapOptions = {
+          center: latlng,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+              position: latlng,
+              map: map
+        });            
+      small
+        a href="https://maps.google.co.jp/maps?q=#{@m.lat},#{@m.lon}&amp;ie=UTF8&amp;t=m&amp;z=10&amp;brcurrent=3,0x5f9a5a6ac898823b:0xec639adf219b5c56,0&amp;ll=#{@m.lat},#{@m.lon}&amp;source=embed" style="color:#0000FF;text-align:left" 大きな地図で見る
+      form.form-inline action="/rendezvous" method="post" name="form1"
+        .form-group
+          input#form1.form-control type="text" name="text"
+        .form-group
+          input#submit_button.btn.btn-info type="submit" value="待ち合わせる"
+        .form-group
+          input#form2.form-control type="text" name="text2"
+    footer
+      p by zakuni

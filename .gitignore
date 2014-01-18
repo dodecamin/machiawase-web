@@ -13,3 +13,5 @@ vendor/bundle/
 
 # for rvm
 .rvmrc
+
+log/
