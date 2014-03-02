@@ -1,4 +1,4 @@
-ruby "2.1.0"
+ruby "2.1.1"
 source "https://rubygems.org"
 gem "sinatra", :require => "sinatra/base"
 gem 'padrino-sprockets', :git => "https://github.com/nightsailer/padrino-sprockets.git", :require => "padrino/sprockets"
